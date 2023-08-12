@@ -108,7 +108,8 @@ document.addEventListener('click', function(event) {
       scrollDownButton.style.display = 'block';
       scrollUpButton.style.display = 'block';
     }
-
+    
+    // New condition to hide scroll-down button at the bottom
     if (window.scrollY >= maxScrollHeight - window.innerHeight) {
       scrollDownButton.style.display = 'none';
     }
