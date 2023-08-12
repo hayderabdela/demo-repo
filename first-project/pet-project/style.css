@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #081b29;
+  color: #ededed;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: width 0.3s ease;
+}
+
+.navbar img {
+  height: 100px;
+  border-radius: 70%;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+}
+
+a:hover,
+a.activ {
+  color: orange;
+}
+
+.navbar .toggle_btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown_menu {
+  display: none;
+  position:absolute;
+  right: 2rem;
+  top: 70px;
+  height: 0;
+  width: 200px;
+  background: rgba(90, 89, 100, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdown_menu.open {
+  height: 200px;
+  width: 200px;
+  padding: 0;
+}
+
+.dropdown_menu li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    text-align: left;
+  }
+  .navbar .links {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    width: unset;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1% 10%;
+  margin-bottom: 10%;
+}
+
+.home-content {
+  max-width: 600px;
+  font-weight: 700;
+}
+
+.home-content h1 {
+  font-size: 50px;
+  text-shadow: 2px 2px 4px red;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  color: #00abf0;
+}
+
+.logo {
+  margin-top: 20px;
+  text-align: center;
+  flex: 1; /* Let logo grow to take available space */
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 60%;
+  box-shadow: 1px 2px 10px white;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.home2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 1% 10% ;
+  margin: 50px 50px 80px;
+}
+.home2 h1{
+  color: #00abf0;
+  padding: 20px;
+}
+
+.home2 .logo {
+  text-align: center;
+  margin: 30px;
+  width: 40%;
+}
+
+.home2 .home-content {
+  text-align: center;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+.unforg {
+  text-align: center;
+  margin: 50px;
+  color: #00abf0;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+  .home h1 {
+    font-size:30px;
+  }
+  .home2 {
+    padding: 5;
+    margin: 0;
+  }
+  .home2 h3{
+    font-size: 25px;
+  }
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 1px 2px 10px white;
+  order: 2;
+  display: flex;
+  flex-wrap: wrap; /* Allow the slider to wrap to the next line if needed */
+  justify-content: center; /* Center the slides horizontally */
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0; /* Adjust the positioning vertically */
+  left: 0; /* Adjust the positioning horizontally */
+  z-index: 2; /* Ensure the text is displayed above the image */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Fading animation */
+.mySlides {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 45%; /* 16:9 aspect ratio (height/width) */
+  overflow: hidden;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.skill{
+  height: 400px;
+  width: 300px;
+  margin: 100px auto 100px;
+  padding:30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(255, 0, 0, 0.9),0 10px 10px rgba(187, 168, 168, 0.8);
+}
+.skill h2{
+  font-size: medium;
+}
+
+.skill li{
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.bar{
+  background: white;
+  display: block;
+  height: 15px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(255, 0, 0, 0.2),0 5px 2px rgba(187, 168, 168, 0.28);
+  transition: all 0.3 cubic-bezier(.25,.8,.25,1);
+}
+ 
+.bar:hover{
+  box-shadow: 0 14px 28px rgba(139, 7, 7, 0.9),0 10px 10px rgba(239, 93, 93, 0.8);
+}
+
+.bar span{
+  height: 20px;
+  float:left;
+  background: linear-gradient(135deg,rgba(236, 0, 140, 1)0%,rgba(252, 103, 103, 1)100%);
+}
+
+.html{
+  width: 50%;
+  animation: html 3s;
+}
+
+.css{
+  width: 40%;
+  animation: css 3s;
+}
+
+.js{
+  width: 30%;
+  animation: js 3s;
+}
+ @keyframes html{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+ }
+
+ @keyframes css{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 40%;
+  }
+ }
+
+ @keyframes js{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 30%;
+  }
+ }
+
+ .contact{
+  padding:0 5% 5%;
+  width: 100%;
+  margin-bottom: 10%;
+  align-items: center;
+
+ }
+
+ .contact-para{
+  font-weight: bold;
+  padding:30px;
+  width: 100%;
+  text-align: center;
+  flex: 1;
+ }
+ .contact-para h1{
+  color: #00abf0;
+  padding:20px 50px;
+ }
+ .contact-para p{
+  padding:20px;
+  text-align: center;
+ }
+
+ .row .contact-col{
+  width: 30%;
+  margin: 0 5%;
+  padding: 10px 10px;
+  flex: 1;
+ }
+
+ /* Add this CSS to your existing stylesheet or style1.css */
+.circle-icon {
+  display: inline-block;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%; /* Creates the circular shape */
+  background-color: #756d6d; /* Set the background color for the circle */
+  text-align: center;
+  line-height: 40px; /* Vertically center the icon */
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.circle-icon i {
+  color: white; /* Set the color of the icon */
+}
+
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer {
+  padding: 70px 20px;
+  background-color: #0c2639;
+}
+.footer-col {
+  width: 30%;
+  padding: 0 15px;
+  flex: 1;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  padding-left: 20px;
+  position: relative;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #cbc8c8;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 5px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: orange;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-attachment: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: orange;
+}
+
+@media (max-width: 767px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 75%;
+  }
+}
+
+
+/* Show the scroll buttons when the user scrolls beyond a certain height */
+body .scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  z-index: 999;
+}
+
+/* When hovering over the buttons, make them more opaque */
+.scroll:hover {
+  opacity: 0.8;
+  color: white;
+}

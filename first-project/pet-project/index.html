@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Portfolio</title>
+</head>
+<body>
+  <a href="#" class="scroll top"><i class="fa-solid fa-circle-up"></i></a>
+  <a href="#" class="scroll bottom"><i class="fa-solid fa-circle-down"></i></a>
+  <header>
+    <div class="navbar" id="1">
+        <img src="images/1.jpg" alt="logo_image"  />
+        <ul class="links">
+          <li><a href="#1"  class="activ">Home</a></li>
+          <li><a href="#2">About me</a></li>
+          <li><a href="#3">Skills</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="#4">Contact</a></li>
+        </ul>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"  style="color: white;"></i> 
+        </div>
+    </div>
+      <div class="dropdown_menu open">
+        <li><a href="#1">Home</a></li>
+        <li><a href="#2">About me</a></li>
+        <li><a href="#3">Skills</a></li>
+        <li><a href="service">Service</a></li>
+        <li><a href="#4">Contact</a></li>
+    </div>
+  </header>
+
+ <section class="home">
+  <div class="home-content">
+    <h1>Hi, I'm Hayder Abdela</h1>
+    <h3>Software Enginnering Student</h3>
+  </div>
+  <div class="logo">
+    <img src="images/2.jpg" alt="image">
+  </div>
+ </section>
+
+ <div class="unforg"><h3>Unforgettable moments</h3></div>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="images/4.jpg" >
+    <div class="text">Vacation</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="images/3.jpg" >
+    <div class="text">Wolkite</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="images/5.jpg" >
+    <div class="text">Addisketema</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+
+  <section class="home2" id="2">
+    <h1>About me</h1>
+    <div class="logo">
+      <img src="images/2.jpg" alt="image">
+    </div>
+    <div class="home-content">
+      <h3>Software Enginnering Student</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, rerum quisquam ut et enim ex doloremque nam ipsa magnam aut, eius laboriosam voluptatum, iste maxime vel. Perspiciatis voluptates consequuntur possimus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim veritatis accusamus voluptate earum amet perferendis esse distinctio inventore culpa, autem aliquam, ratione atque nam minima? Voluptate, velit. Vel, enim ab!</p>
+    </div>
+   </section>
+  </div>
+ 
+ 
+<div class="skill" id="3">
+  <h1 style="text-align: center " >My SKill</h1>
+  <li>
+    <h2>HTML</h2>
+    <span class="bar"><span class="html"></span></span>
+  </li>
+  <li>
+    <h2 >CSS</h2>
+    <span class="bar"><span class="css"></span></span>
+  </li>
+  <li>
+    <h2>Javascript</h2>
+    <span class="bar"><span class="js"></span></span>
+  </li>
+</div>
+
+<div class="contact" id="4">
+  <div class="contact-para">
+    <h1>Contact me</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione accusantium, labore, soluta expedita veniam rerum atque incidunt corporis odit sit, magnam voluptatum blanditiis numquam perferendis temporibus totam? Nam, nulla illum. lo</p>
+  </div>
+  <div class="row">
+    <div class="contact-col">
+      <div class="circle-icon">
+        <i class="fa-solid fa-location-dot "></i>
+      </div>
+      <h3>Address</h3>
+      <address>
+        Done by Hayder Abdela.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, AddisAbaba<br>
+        Ethiopia
+        </address>
+    </div>
+    <div class="contact-col">
+      <div class="circle-icon">
+        <i class="fa-solid fa-phone "></i>
+      </div>
+      <h3>phone</h3>
+      <p>+251-979-94-38-68</p>
+    </div>
+    <div class="contact-col">
+      <div class="circle-icon">
+        <i class="fa-solid fa-square-envelope"></i>
+      </div>
+      <h3>E-mail</h3>
+      <p>hayderabedla@1112gmail.com</p>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Location</h4>
+          <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4885.820972081595!2d38.700440515757165!3d9.048147027046596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b89c1d7834c19%3A0x76e6dcc61497246e!2sHubeib%20Masjid!5e0!3m2!1sen!2set!4v1691398787539!5m2!1sen!2set" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#1">Home</a></li>
+            <li><a href="#2">About me</a></li>
+            <li><a href="#3">Skills</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="#4">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact me</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100090525625965" target="_blank"><i class="fa-brands fa-facebook"  ></i></a>
+            <a href="https://www.instagram.com/hayder_abdela/" target="_blank"><i class="fa-brands fa-instagram" ></i></a>
+            <a href="https://twitter.com/HAbdela90494" target="_blank"><i class="fa-brands fa-twitter" ></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
